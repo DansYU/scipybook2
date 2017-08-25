@@ -5,10 +5,10 @@ jupyter-nbconvert Notebooks/Index.ipynb --reveal-prefix=reveal.js
 mv Notebooks/Index.html  index.html
 
 cd Notebooks
-#arr1=`ls *.ipynb`
-#arr2=`ls */*.ipynb`
-arr=(*/*.ipynb)
-#arr=${arr1}+${arr2}
+arr1=`ls *.ipynb`
+arr2=`ls */*.ipynb`
+#arr=(*/*.ipynb)
+arr=${arr1}+${arr2}
 cd ..
 for f in "${arr[@]}"; do
    # Chop off the extension
@@ -28,9 +28,9 @@ for f in "${arr[@]}"; do
    #mv Notebooks/"$filename".slides.html  Slides/"$filename".html
 
    # Convert the Notebook to Markdown
-#   jupyter-nbconvert --to markdown Notebooks/"${dir_name}"/"$filename".ipynb
+   jupyter-nbconvert --to markdown Notebooks/"${dir_name}"/"$filename".ipynb
    # Move to the Markdown directory
-#   mv Notebooks/"${dir_name}"/"$filename".md  Markdown/"${dir_name}"/"$filename".md
+   mv Notebooks/"${dir_name}"/"$filename".md  Markdown/"${dir_name}"/"$filename".md
 
    # Convert the Notebook to Latex
    #jupyter-nbconvert --to latex Notebooks/"$filename".ipynb
