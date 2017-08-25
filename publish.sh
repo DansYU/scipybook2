@@ -28,9 +28,9 @@ for f in "${arr[@]}"; do
    #mv Notebooks/"$filename".slides.html  Slides/"$filename".html
 
    # Convert the Notebook to Markdown
-   jupyter-nbconvert --to markdown Notebooks/"${dir_name}"/"$filename".ipynb
+#   jupyter-nbconvert --to markdown Notebooks/"${dir_name}"/"$filename".ipynb
    # Move to the Markdown directory
-   mv Notebooks/"${dir_name}"/"$filename".md  Markdown/"${dir_name}"/"$filename".md
+#   mv Notebooks/"${dir_name}"/"$filename".md  Markdown/"${dir_name}"/"$filename".md
 
    # Convert the Notebook to Latex
    #jupyter-nbconvert --to latex Notebooks/"$filename".ipynb
