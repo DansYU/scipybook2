@@ -5,10 +5,10 @@ jupyter-nbconvert Notebooks/Index.ipynb --reveal-prefix=reveal.js
 mv Notebooks/Index.html  index.html
 
 cd Notebooks
-arr1=`ls *.ipynb`
+#arr1=`ls *.ipynb`
 #arr2=`ls */*.ipynb`
-#arr=(*.ipynb)
-arr=${arr1}+${arr2}
+arr=(*.ipynb)
+#arr=${arr1}+${arr2}
 cd ..
 for f in "${arr[@]}"; do
    # Chop off the extension
